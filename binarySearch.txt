@@ -1,0 +1,23 @@
+binary search
+
+1. find the none-larger-than-key element:
+
+while(lo < hi) {
+	mid = (lo + hi) / 2;
+	if (nums[mid] < key) {
+		lo = mid + 1;
+	} else {
+		hi = mid;
+	}
+}
+
+2. find the none-smaller-than-key element:
+
+while(lo < hi) {
+	mid = (lo + hi + 1) / 2;
+	if (nums[mid] > key) {
+		hi = mid - 1;
+	} else {
+		lo = mid;
+	}
+}
